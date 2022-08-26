@@ -1,5 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
-import {SIGN_IN,SIGN_OUT} from './actions/types';
+import {SIGN_IN,SIGN_OUT} from '../actions/types';
+
 const INTIAL_STATE = {
     isSignedIn: null,
     userId: null
