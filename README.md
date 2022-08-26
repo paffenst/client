@@ -1,1 +1,1 @@
-# client
+# Stream App - Client
