@@ -10,8 +10,7 @@ const ErrorMessage = ({ name, component }) => {
       ? React.createElement(component, null, error)
       : null
 }
-
-
+//new StreamCreate code
 const StreamCreate = props => {
   const { handleSubmit, pristine, form, submitting } = props
  
