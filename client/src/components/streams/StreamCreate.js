@@ -1,5 +1,6 @@
 import React from 'react'
 import { Form, Field, useField } from 'react-final-form'
+import { FORM_ERROR } from 'final-form'
 
 // Obviously this could be reused across your project
 const ErrorMessage = ({ name, component }) => {
@@ -10,29 +11,29 @@ const ErrorMessage = ({ name, component }) => {
       ? React.createElement(component, null, error)
       : null
 }
-//new StreamCreate code
+
+
 const StreamCreate = props => {
-  const { handleSubmit, pristine, form, submitting } = props
- 
+
+  const { handleSubmit, pristine, form, reset, submitting } = props
   return (
     <Form
-    initialValues={{
-                title: 'title',
-                description: 'description'
+   // onSubmit={onSubmit}
+    initialValues={{ }}
+     onSubmit={values =>  {
+    //           this.props.handleSubmit(this.onSubmit)
+    //           alert('Hi there');// send values to the cloud
+               }}
+    validate={values => {
+  
+      // do validation here, and return errors object
               }}
-              onSubmit={values =>  {
-                this.props.handleSubmit(this.onSubmit)
-                // send values to the cloud
-              }}
-              validate={values => {
-                // do validation here, and return errors object
-              }}
-    >
+      >
       {() => (
         <form className="ui form" onSubmit={handleSubmit}>
            <div>
              <label>Title</label>
-             <Field
+             <Field 
                name="title"
                component="input"
                type="text"
@@ -49,19 +50,21 @@ const StreamCreate = props => {
                placeholder="enter description"
              />
            </div>
-           </form>
+        </form>
+        
         <div>
-          <button className="ui button primary" type="submit" disabled={submitting}>
+          <button className="ui button primary" type="submit" disabled={submitting} >
             Submit
           </button>
-          <button
-            className="ui button"
-            type="button"
-            disabled={pristine || submitting}
-            onClick={form}
+
+          <button 
+              className="ui button"
+              type="button"
+              onClick={form}
+              disabled={submitting || pristine}
             >
-            Clear Values
-          </button>
+              Reset
+            </button>
         </div>
       </form>
       )}
