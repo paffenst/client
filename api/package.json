@@ -1,12 +1,12 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
+  "description": "API for React App",
   "main": "index.js",
   "scripts": {
     "start":"json-server -p 3001 -w db.json" 
   },
-  "author": "",
+  "author": "Pavel St /paffen/",
   "license": "ISC",
   "dependencies": {
     "json-server": "^0.17.0"

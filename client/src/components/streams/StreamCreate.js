@@ -21,11 +21,9 @@ const StreamCreate = props => {
    // onSubmit={onSubmit}
     initialValues={{ }}
      onSubmit={values =>  {
-    //           this.props.handleSubmit(this.onSubmit)
     //           alert('Hi there');// send values to the cloud
                }}
     validate={values => {
-  
       // do validation here, and return errors object
               }}
       >
@@ -33,38 +31,20 @@ const StreamCreate = props => {
         <form className="ui form" onSubmit={handleSubmit}>
            <div>
              <label>Title</label>
-             <Field 
-               name="title"
-               component="input"
-               type="text"
-               placeholder="enter title"
-             />
+             <Field name="title" component="input"type="text" placeholder="enter title"/>
            </div>
-           <form className="ui form" onSubmit={handleSubmit}>
+           <div className="ui form" onSubmit={handleSubmit}>
            <div>
              <label>Description</label>
-             <Field
-               name="description"
-               component="input"
-               type="text"
-               placeholder="enter description"
-             />
+             <Field name="description" component="input" type="text" placeholder="enter description" />
            </div>
-        </form>
-        
+        </div>
         <div>
           <button className="ui button primary" type="submit" disabled={submitting} >
             Submit
           </button>
-
-          <button 
-              className="ui button"
-              type="button"
-              onClick={form}
-              disabled={submitting || pristine}
-            >
-              Reset
-            </button>
+           {/* <button className="ui button" type="button" disabled={submitting || pristine} > Reset
+            </button>  */}
         </div>
       </form>
       )}
