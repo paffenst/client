@@ -21,7 +21,6 @@ const onSubmit = async values => {
 };
 
 const StreamCreate = props => {
-  console.log('eho ');
   const { handleSubmit, pristine, form, reset, submitting } = props 
   
   return (

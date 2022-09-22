@@ -19,7 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var _default = (0, _redux.combineReducers)({
   auth: _authReducer["default"],
-  streams: _streamReducer["default"] //form: Form 
+  streams: _streamReducer["default"] // form: Form 
 
 });
 
