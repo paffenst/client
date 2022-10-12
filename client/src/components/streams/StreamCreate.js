@@ -3,6 +3,7 @@ import { Form, Field } from 'react-final-form'
 import { FORM_ERROR } from 'final-form'
 import { connect } from 'react-redux'
 import { createStream } from '../../actions'
+import StreamForm from './StreamForm'
 
 // Obviously this could be reused across your project
 const ErrorMessage = ({ name, component }) => {
@@ -21,6 +22,7 @@ const onSubmit = async values => {
 };
 
 const StreamCreate = props => {
+  
   const { handleSubmit, pristine, form, reset, submitting } = props 
   
   return (
