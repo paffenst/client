@@ -11,6 +11,12 @@
         "description": "Here's some stream",
         "userId": 108008123543046650651,
         "id": 2
+      },
+              {
+        "title": "Funny Stream",
+        "description": "Here's more funniest stream ever",
+        "userId": 108008123543046650651,
+        "id": 3
       }
     ]
   }
