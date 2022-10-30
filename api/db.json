@@ -1,22 +1,31 @@
 {
-    "streams": [
-      {
-        "title": "My Stream",
-        "description": "This is a great stream.",
-        "userId": 108008123543046650651,
-        "id": 1
-      },
-      {
-        "title": "Other Stream",
-        "description": "Here's some stream",
-        "userId": 108008123543046650651,
-        "id": 2
-      },
-              {
-        "title": "Funny Stream",
-        "description": "Here's more funniest stream ever",
-        "userId": 108008123543046650651,
-        "id": 3
-      }
-    ]
-  }
+  "streams": [
+    {
+      "title": "My Stream",
+      "description": "This is a great stream.",
+      "id": 1
+    },
+    {
+      "title": "Other Stream",
+      "description": "Here's some stream",
+      "id": 2
+    },
+    {
+      "title": "I Created This Stream",
+      "description": "This change was made by a PATCH request",
+      "userId": "111113427830310115815",
+      "id": 3
+    },
+    {
+      "title": "Me Streaming Component Reuse!",
+      "description": "This stream is about refactoring!!!",
+      "id": 4
+    },
+    {
+      "title": "myMoney",
+      "description": "Get My money back soon :)",
+      "userId": null,
+      "id": 5
+    }
+  ]
+}
