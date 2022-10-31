@@ -1,5 +1,5 @@
 import React from 'react';
-import flv from 'flv.js';
+import flvjs from 'flv.js';
 import { connect } from 'react-redux';
 import { fetchStream } from '../../actions';
 
@@ -32,7 +32,7 @@ class StreamShow extends React.Component {
 
     const { id } = this.props.match.params;
     this.player = flv.createPlayer({
-      type: 'flv',
+      type: 'flvjs',
       url: `http://localhost:8000/live/${id}.flv`
     });
     this.player.attachMediaElement(this.videoRef.current);
