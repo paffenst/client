@@ -11,7 +11,7 @@ import { signIn, signOut } from '../actions';
     //clientID : '797401886567-9cumct9mrt3v2va409rasa7fa6fq02hh.apps.googleusercontent.com',
          clientId : '468032584914-e26gbvoct28j25tjufk3h5jsqm0o7lk6.apps.googleusercontent.com',
          scope: 'email',
-         //plugin_name: 'Streamy'
+         plugin_name: 'Streamy',
          }).then(()=> {
             this.auth = window.gapi.auth2.getAuthInstance();
           //  this.setState({ isSignedIn: this.auth.isSignedIn.get()})

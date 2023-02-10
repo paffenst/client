@@ -7,6 +7,8 @@ exports.deleteStream = exports.editStream = exports.fetchStream = exports.fetchS
 
 var _streams = _interopRequireDefault(require("../apis/streams"));
 
+var _history = _interopRequireDefault(require("../history"));
+
 var _types = require("./types");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -43,7 +45,7 @@ var createStream = function createStream(formValues) {
           case 0:
             userId = getState().auth.userId;
             _context.next = 3;
-            return regeneratorRuntime.awrap(_streams["default"].post('/streams', _objectSpread({}, formValules, {
+            return regeneratorRuntime.awrap(_streams["default"].post("/streams", _objectSpread({}, formValues, {
               userId: userId
             })));
 
@@ -54,7 +56,9 @@ var createStream = function createStream(formValues) {
               payload: response.data
             });
 
-          case 5:
+            _history["default"].push("/");
+
+          case 6:
           case "end":
             return _context.stop();
         }
@@ -73,7 +77,7 @@ var fetchStreams = function fetchStreams() {
         switch (_context2.prev = _context2.next) {
           case 0:
             _context2.next = 2;
-            return regeneratorRuntime.awrap(_streams["default"].get('/streams'));
+            return regeneratorRuntime.awrap(_streams["default"].get("/streams"));
 
           case 2:
             response = _context2.sent;
@@ -121,7 +125,7 @@ var fetchStream = function fetchStream(id) {
 
 exports.fetchStream = fetchStream;
 
-var editStream = function editStream(id, form) {
+var editStream = function editStream(id, formValues) {
   return function _callee4(dispatch) {
     var response;
     return regeneratorRuntime.async(function _callee4$(_context4) {
@@ -129,7 +133,7 @@ var editStream = function editStream(id, form) {
         switch (_context4.prev = _context4.next) {
           case 0:
             _context4.next = 2;
-            return regeneratorRuntime.awrap(_streams["default"].put("/streams/".concat(id)));
+            return regeneratorRuntime.awrap(_streams["default"].patch("/streams/".concat(id), formValues));
 
           case 2:
             response = _context4.sent;
@@ -138,7 +142,9 @@ var editStream = function editStream(id, form) {
               payload: response.data
             });
 
-          case 4:
+            _history["default"].push("/");
+
+          case 5:
           case "end":
             return _context4.stop();
         }
@@ -164,7 +170,9 @@ var deleteStream = function deleteStream(id) {
               payload: id
             });
 
-          case 3:
+            _history["default"].push("/");
+
+          case 4:
           case "end":
             return _context5.stop();
         }

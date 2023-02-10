@@ -36,7 +36,7 @@ const StreamForm = (props) => {
 
         if (!formValues.title) {
           errors.title = "You must enter a title";
-        }
+         }
 
         if (!formValues.description) {
           errors.description = "You must enter a description";
