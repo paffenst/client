@@ -1,5 +1,5 @@
 import React from 'react';
-//import flvjs from 'flv.js';
+import flv from 'flv.js';
 import { connect } from 'react-redux';
 import { fetchStream } from '../../actions';
 
@@ -48,6 +48,7 @@ class StreamShow extends React.Component {
 
     return (
       <div>
+        <video ref={this.videoRef} style={{width: '100%'}} controls={true}/>
         <h1>{title}</h1>
         <h5>{description}</h5>
       </div>
